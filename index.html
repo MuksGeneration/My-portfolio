@@ -1,0 +1,132 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="main-container">
+
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="images/muks.jpg" alt="profile">
+        <h2>Mukula David</h2>
+        <p>Electrical & Software Engineer</p>
+      </div>
+
+      <div class="contact">
+        <a href="mailto:Mukuladavid6@gmail.com"><i class="fa-solid fa-envelope"></i>Mukuladavid6@gmail.com</a>
+        <a href="tel:+256746716477"><i class="fa-solid fa-phone"></i> +256746716477</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Uganda</a>
+      </div>
+
+      <div class="social">
+        <a href="https://github.com/MuksGeneration"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/mukula-david-381387304?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://x.com/GenerationMuks"><i class="fa-brands fa-twitter"></i> Twitter</a>
+      </div>
+    </aside>
+
+    <main>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+      </nav>
+
+      <section id="about" class="fade-in">
+        <h2 class="heading">About Me</h2>
+        <div class="line"></div>
+        <p>I am an electrical engineering student passionate about software development and building real-world systems like shop management apps and school platforms.</p>
+      </section>
+
+      <section id="skills" class="fade-in">
+        <h2 class="heading">Skills</h2>
+        <div class="line"></div>
+        <div class="skills-container">
+          <div class="skill-item"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
+          <div class="skill-item"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
+          <div class="skill-item"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+          <div class="skill-item"><i class="fa-solid fa-database"></i><p>Firebase</p></div>
+        </div>
+      </section>
+
+      <!-- Education Timeline -->
+      <section id="education" class="fade-in">
+        <h2 class="heading">Education</h2>
+        <div class="line"></div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="circle"></div>
+            <div class="content">
+              <h3>2024 - 2025</h3>
+              <p>Nile Vocational Institute,Njeru</p>
+              <span>National Certificate in Electrical Systems</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="circle"></div>
+            <div class="content">
+              <h3>2018 - 2023</h3>
+              <p>St.Mark's Secondary School,Kammengo</p>
+              <span>Uganda Certificate of Education</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="fade-in">
+        <h2 class="heading">Projects</h2>
+        <div class="line"></div>
+        <div class="project-container">
+
+          <div class="project-card">
+            <img src="https://unsplash.com/photos/black-laptop-computer-on-brown-wooden-table-aCkaR5G4Zd4" alt="">
+            <div>
+              <h3>Muks Shop Manager</h3>
+              <p>Firebase-based shop management system.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://via.placeholder.com/300" alt="">
+            <div>
+              <h3>School System</h3>
+              <p>Student-teacher management app.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
